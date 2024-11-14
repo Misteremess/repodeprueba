@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>IES Azarquiel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="index.html"><img src="img/logo1.gif" alt="Logo personalizado MAX"></a></div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="parrafos.html">Parrafos</a></li>
+                    <li><a href="enlaces.html">Enlaces</a></li>
+                    <li><a href="listas.html">Listas</a></li>
+                    <li><a href="tablas.html">Tablas</a></li>
+                    <li><a href="formularios.html">Formularios</a></li>
+                    <li><a href="multimedia.html">Multimedia</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="parrafos.html">Parrafos</a></li>
+                <li><a href="enlaces.html">Enlaces</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="tablas.html">Tablas</a></li>
+                <li><a href="formularios.html">Formularios</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id="parrafos">
+                <div class="text_center">
+                    <h1>MULTIMEDIA</h1>
+                </div>
+                <div class="gallery2pos">
+                    <div class="gallery2">
+                        <span style="--i:1">
+                          <img src="img/carrusel1.jpg" alt="" />
+                        </span>
+                        <span style="--i:2">
+                          <img src="img/carrusel2.jpg" alt="" />
+                        </span>
+                        <span style="--i:3">
+                          <img src="img/carrusel3.jpg" alt="" />
+                        </span>
+                        <span style="--i:4">
+                          <img src="img/carrusel4.jpg" alt="" />
+                        </span>
+                        <span style="--i:5">
+                          <img src="img/carrusel5.jpg" alt="" />
+                        </span>
+                        <span style="--i:6">
+                          <img src="img/carrusel6.jpg" alt="" />
+                        </span>
+                        <span style="--i:7">
+                          <img src="img/carrusel7.jpg" alt="" />
+                        </span>
+                        <span style="--i:8">
+                          <img src="img/carrusel8.jpg" alt="" />
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <video class="video" width="100%" height="auto" autoplay muted loop controls>
+                        <source src="resources/videotoledo.mp4" type="video/mp4">
+                    </video>
+                      
+                </div>
+                <div class="audio-container">
+                    <audio controls>
+                        <source src="resources/audiopresentacion.m4a" type="audio/mp3">
+                      </audio>
+                      
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <h2>&copy; Máximo Du Pérez</h2>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
